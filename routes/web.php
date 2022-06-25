@@ -18,6 +18,8 @@ Route::get('', function () {return view('facebook');});
 
 Route::get('auth/facebook', [FacebookController::class, 'redirectToFacebook']);
 Route::get('auth/facebook/callback', [FacebookController::class, 'handleFacebookCallback']);
+Route::get('auth/stockdata/{id}', [FacebookController::class, 'getStockData']);
+
 
 Auth::routes();
 
